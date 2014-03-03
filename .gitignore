@@ -1,0 +1,9 @@
+*.class
+
+#Build directory
+build-tmp
+
+# Package Files #
+*.jar
+*.war
+*.ear
