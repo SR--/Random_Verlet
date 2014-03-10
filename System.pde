@@ -54,6 +54,30 @@ class System {
     makeSpring(p, q);
   }
 
+  //Remove the last added particle and its spring
+  void removeLastNode(){
+    for (Iterator<VerletSpring2D> i = physics.springs.iterator(); i.hasNext();) {
+      VerletSpring2D s = i.next();
+      if (! i.hasNext()) {
+        i.remove();
+      }
+    }
+
+    for (Iterator<VerletParticle2D> i = physics.particles.iterator(); i.hasNext();) {
+      VerletParticle2D p = i.next();
+      if (! i.hasNext()) {
+        i.remove();
+      }
+  }
+
+
+    // int i = physics.particles.size() -1 ;
+    // if (i > 0){
+    //   VerletParticle2D p = physics.particles.get(i);
+    //   physics.removeParticle(p);
+    // }
+  }
+
   void makeSpring(Particle particle, Particle previous){
     VerletSpring2D spring = new VerletSpring2D(particle, previous, springLength, springStrength);
     // Add the spring to the physics world

@@ -1,5 +1,5 @@
-//this is just trying to convert Random Arboretum from traer physics
-//to verlet physics from toxy
+//Dependances
+//toxilibs 0021
 
 import java.util.Iterator;
 
@@ -45,10 +45,18 @@ void draw() {
 
 void mousePressed()
 {
-  system.addNode();
+  if (mouseButton == LEFT){
+    system.addNode();
+  } else if (mouseButton == RIGHT) {
+    system.removeLastNode();
+  }
 }
 
 void mouseDragged()
 {
-  system.addNode();
+  if (mouseButton == LEFT){
+    system.addNode();
+  } else if (mouseButton == RIGHT) {
+    system.removeLastNode();
+  }
 }
