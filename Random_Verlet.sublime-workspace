@@ -79,7 +79,7 @@
 			"file": "System.pde",
 			"settings":
 			{
-				"buffer_size": 3345,
+				"buffer_size": 3124,
 				"line_ending": "Windows"
 			}
 		}
@@ -331,7 +331,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -391,7 +391,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{
@@ -400,15 +400,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3345,
+						"buffer_size": 3124,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1895,
-								1895
+								1389,
+								1389
 							]
 						],
 						"settings":
@@ -416,7 +416,7 @@
 							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 256.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

@@ -5,28 +5,19 @@ class System {
   float attrStrength;
   float attrRadius;
 
-  // This list is redundant since we can ask for physics.particles, but in case we have many of these
-  // it's a convenient to keep track of our own list
-  ArrayList<Particle> particles;
-
   //Particle system constructor
   System(){
-    particles = new ArrayList<Particle>();
-
     springLength = 15;
     springStrength = 0.01;
     attrStrength = 3;
     attrRadius = 80;
   }
 
-  // Initialise the particle system and add the first particle
+  // Initialize the particle system and add the first particle
   void initialize(){
     physics.clear();
     Particle particle = new Particle(width/2, height/2);
-
     physics.addParticle(particle);
-    particles.add(particle);
-
     physics.addBehavior(new AttractionBehavior2D(particle, attrRadius, -attrStrength, 0.01f));
   }
 
@@ -38,20 +29,27 @@ class System {
     drawParticles();
   }
 
-  // Add a particle to the system (at a random place)
+  // Add a particle to the system (at a random location and branch)
   void addNode()
   { 
-    // Position this new particle within limited distance from an
+    //check if all particles have been removed
+    //if so, initialize
+    if (physics.particles.isEmpty()){
+      initialize();
+    }
+    // otherwise, position the new particle within limited distance from an
     // existing particle and link it with a spring
-    Particle q = particles.get((int)random(0, particles.size()-1));
+    else {
+      Particle q = (Particle)physics.particles.get((int)random(0, physics.particles.size()-1));
 
-    // Make a new particle and add it to the two arrays
-    Particle p = new Particle(q.x + random(-1, 1), q.y + random(-1, 1));
-    physics.addParticle(p);
-    particles.add(p);
+      // Make a new particle and add it to the array
+      Particle p = new Particle(q.x + random(-1, 1), q.y + random(-1, 1));
+      physics.addParticle(p);
 
-    addAttraction(p);
-    makeSpring(p, q);
+      //add the physics properties
+      addAttraction(p);
+      makeSpring(p, q);
+    }
   }
 
   //Remove the last added particle and its spring
@@ -68,22 +66,17 @@ class System {
       if (! i.hasNext()) {
         i.remove();
       }
+    }
   }
 
-
-    // int i = physics.particles.size() -1 ;
-    // if (i > 0){
-    //   VerletParticle2D p = physics.particles.get(i);
-    //   physics.removeParticle(p);
-    // }
-  }
-
+  //make a spring between two particles
   void makeSpring(Particle particle, Particle previous){
     VerletSpring2D spring = new VerletSpring2D(particle, previous, springLength, springStrength);
     // Add the spring to the physics world
     physics.addSpring(spring);
   }
 
+  //add attraction to a particle
   void addAttraction(Particle p){
     physics.addBehavior(new AttractionBehavior2D(p, attrRadius, -attrStrength, 0.01f));
   }
@@ -91,8 +84,8 @@ class System {
 ///////////////////////////////////
 // Functions for modifying values dynamically
 
+  //adjust attraction properties
   void changeAttractors() {
-    // Update physics world attraction behaviour force radius
     for (Iterator b = physics.behaviors.iterator(); b.hasNext();) {
       AttractionBehavior2D att = (AttractionBehavior2D)b.next();
       att.setRadius(attrRadius);
@@ -100,8 +93,8 @@ class System {
     }
   }
 
+  //adjust spring properties
   void changeSprings() {
-    // Update physics world attraction behaviour force radius
     for (Iterator b = physics.springs.iterator(); b.hasNext();) {
       VerletSpring2D sp = (VerletSpring2D)b.next();
       sp.setRestLength(springLength);
@@ -109,8 +102,8 @@ class System {
     }
   }
 
+  //draw all particles of the system
   void drawParticles() {
-    // Update physics world attraction behaviour force radius
     for (Iterator b = physics.particles.iterator(); b.hasNext();) {
       Particle p = (Particle)b.next();
       p.display();
