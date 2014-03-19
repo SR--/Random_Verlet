@@ -1,5 +1,10 @@
-//Dependances
-//toxilibs 0021
+// Dependances
+// toxilibs 0021
+
+// Functionality and control
+// Use the left mouse button to add balls
+// The right mouse button to remobe balls
+// Onscreen controls control system geometry
 
 import java.util.Iterator;
 
@@ -14,10 +19,11 @@ VerletPhysics2D physics;
 System system;
 
 void setup() {
-  size(1920, 1080);
+  size(1360, 768);
   smooth();
   // Initialize the physics world
   physics = new VerletPhysics2D();
+  physics.setDrag(0.05f);
   physics.setWorldBounds(new Rect(0, 0, width, height));
 
   //Initialise the particle system

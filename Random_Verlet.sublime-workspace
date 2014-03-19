@@ -55,23 +55,7 @@
 			"file": "Random_Verlet.pde",
 			"settings":
 			{
-				"buffer_size": 1154,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Controls.pde",
-			"settings":
-			{
-				"buffer_size": 1795,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "Particle.pde",
-			"settings":
-			{
-				"buffer_size": 351,
+				"buffer_size": 1314,
 				"line_ending": "Windows"
 			}
 		},
@@ -82,14 +66,54 @@
 				"buffer_size": 3124,
 				"line_ending": "Windows"
 			}
+		},
+		{
+			"file": "Particle.pde",
+			"settings":
+			{
+				"buffer_size": 338,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Controls.pde",
+			"settings":
+			{
+				"buffer_size": 1795,
+				"line_ending": "Windows"
+			}
 		}
 	],
 	"build_system": "Packages/Processing/Processing.sublime-build",
 	"command_palette":
 	{
-		"height": 242.0,
+		"height": 392.0,
 		"selected_items":
 		[
+			[
+				"",
+				"Build: Run sketch fullscreen"
+			],
+			[
+				"buil",
+				"Build: Run sketch fullscreen"
+			],
+			[
+				"bui",
+				"Build: Run sketch fullscreen"
+			],
+			[
+				"build",
+				"Build: Run sketch fullscreen"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"linter",
+				"SublimeLinter: Show All Errors"
+			],
 			[
 				"gitstat",
 				"Git: Status"
@@ -101,10 +125,6 @@
 			[
 				"git st",
 				"Git: Status"
-			],
-			[
-				"Package Control: ",
-				"Package Control: Install Package"
 			],
 			[
 				"Package Control:",
@@ -161,6 +181,13 @@
 	},
 	"file_history":
 	[
+		"/D/_Work_Files_702L-102812-W_ntbk/Programming/PROJECTS/Random_Verlet/.git/config",
+		"/C/Users/srou/AppData/Roaming/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/C/Users/srou/AppData/Roaming/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/D/_Work_Files_702L-102812-W_ntbk/Programming/PROJECTS/Random_Verlet/Random_Verlet.pde",
+		"/D/_Work_Files_702L-102812-W_ntbk/Programming/PROJECTS/Random_Verlet/Particle.pde",
+		"/D/_Work_Files_702L-102812-W_ntbk/Programming/PROJECTS/Random_Verlet/Controls.pde",
+		"/D/_Work_Files_702L-102812-W_ntbk/Programming/PROJECTS/Random_Verlet/System.pde",
 		"/D/_Work_Files_702L-102812-W_ntbk/Programming/PROJECTS/Random_Verlet/Random_Verlet.sublime-workspace",
 		"/C/Users/srou/AppData/Roaming/Sublime Text 3/Packages/User/SublimeGit.sublime-settings",
 		"/C/Users/srou/AppData/Roaming/Sublime Text 3/Packages/SublimeGit/SublimeGit.sublime-settings",
@@ -303,7 +330,7 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -312,73 +339,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1154,
+						"buffer_size": 1314,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								249,
-								249
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "Controls.pde",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1795,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1699,
-								1699
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Particle.pde",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 351,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								290,
-								290
+								190,
+								190
 							]
 						],
 						"settings":
@@ -395,7 +364,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 1,
 					"file": "System.pde",
 					"semi_transient": false,
 					"settings":
@@ -407,19 +376,81 @@
 						"selection":
 						[
 							[
-								1389,
-								1389
+								584,
+								584
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage"
+							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 1485.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Particle.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 338,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								270,
+								270
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 256.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Controls.pde",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Processing/Syntax/Processing.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 405.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]

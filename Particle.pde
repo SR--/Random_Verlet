@@ -6,9 +6,10 @@ class Particle extends VerletParticle2D {
     super(x,y);
   }
 
-  // All we're doing really is adding a display() function to a VerletParticle
+  // add a display() function to a VerletParticle
   void display() {
     fill(0);
+    noStroke();
     //stroke(0);
     //strokeWeight(1);
     ellipse(x, y, radius*2, radius*2);
