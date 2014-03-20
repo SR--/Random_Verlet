@@ -2,7 +2,13 @@
 
 #Build directory
 build-tmp
+
+#Processing files
 sketch.properties
+
+#Sublime files
+*.sublime-project
+*.sublime-workspace
 
 # Package Files #
 *.jar
